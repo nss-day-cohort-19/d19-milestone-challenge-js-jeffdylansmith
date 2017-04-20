@@ -28,10 +28,3 @@ document.addEventListener("keyup", function(event) {
 		treebuilder(hei,cha);
 	}
 });
-
-
-
-
-
-
-

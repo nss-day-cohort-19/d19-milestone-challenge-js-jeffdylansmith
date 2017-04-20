@@ -3,16 +3,20 @@ var treedims = {
 	c:document.getElementById("char") 
 }
 function treebuilder(height, character){
-	height = parseInt(height);
-	var tree = "";
-	var space = " ";
-	tree += character;
-	var treespace = space.repeat(height * character.length + character.length * 2);
-	console.log(treespace + tree);
-	for (i = height; i > 1; i--){
-		var tspace = space.repeat(i * character.length + character.length);
-		tree += character + character;
-		console.log(tspace + tree);
+	if (height == "" || character == ""){
+		alert("Both feilds must have a character.");
+	} else {
+		height = parseInt(height);
+		var tree = "";
+		var space = " ";
+		tree += character;
+		var treespace = space.repeat(height * character.length + character.length * 2);
+		console.log(treespace + tree);
+		for (i = height; i > 1; i--){
+			var tspace = space.repeat(i * character.length + character.length);
+			tree += character + character;
+			console.log(tspace + tree);
+		}	
 	}		
 }
 var submit = document.getElementById("submit");
